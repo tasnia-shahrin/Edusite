@@ -12,6 +12,13 @@ nav{
     z-index: 10;
 }
 .logo{
+    display: flex;
+    align-items: center;
+} 
+.logo h1{
+    font-size: 35px;
+}
+.logo img{
     width: 120px;
 }
 nav ul li{
@@ -23,4 +30,48 @@ nav ul li{
 .dark-nav{
     background: #212EA0;
     transition: 0.5s;
+}
+.menu{
+    display: none;
+}
+
+/* media query */
+@media (max-width:1000px){
+    .logo img{
+        width: 100px;
+    }
+    .logo h1{
+        font-size:26px;
+    }
+    nav ul li{
+        margin: 10px 12px;
+    }
+}
+@media (max-width:840px){
+    nav{
+        padding: 15px 0;
+    }
+    nav ul{
+        background: #212EA0;
+        position: fixed;
+        top:0;
+        right:0;       
+        bottom: 0;
+        width: 200px;
+        z-index: -1;
+        padding-top: 70px;
+        transition: 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px 40px;
+    }
+    .menu{
+        display: block;
+        cursor: pointer;
+        width: 30px;
+    }
+    .hide-menu{
+        right:-200px;
+    }
 }
